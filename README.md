@@ -7,4 +7,3 @@ Android Client for Unsplash.com Unsplash is internet’s source of freely usable
 * Download raw photos
 * View user profile
 * Log in to like photos
-* Various layout options
