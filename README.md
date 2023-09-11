@@ -9,6 +9,6 @@ Android Client for Unsplash.com Unsplash is internet’s source of freely usable
 * Log in to like photos
 
 # Screenshots
-<img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/1intro.png" width="225"> <img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/2intro.png" width="225">
+<img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/1intro.png" width="225"> <img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/2intro.png" width="225"><img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/3intro.png" width="225"><img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/photos_screen.png" width="225"><img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/collections_screen.png" width="225"><img src="https://github.com/condorserg/SplashBox/blob/master/screenshots/user_screen.png" width="225">
 # Usage
 You need to join to https://unsplash.com/join to use this App.
