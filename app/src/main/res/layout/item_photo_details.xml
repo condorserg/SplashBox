@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/photoDetailsImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="false"
+        android:foreground="?selectableItemBackground"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/photoDetailsImageView"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@+id/userImageView"
+        app:layout_constraintEnd_toStartOf="@id/location_button"
+        app:layout_constraintTop_toBottomOf="@id/photoDetailsImageView"
+        tools:text="User Name"
+        style="@style/PhotoDetailsTextStyle"/>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/download_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:src="@drawable/ic_download"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/guidelineRight"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/photoDetailsImageView" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/like_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:src="@drawable/ic_favorite_border_24"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/download_button"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/photoDetailsImageView" />-->
+
+    <ImageView
+        android:id="@+id/location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@id/photoDetailsImageView" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/userImageView" />
+
+    <TextView
+        android:id="@+id/cameraTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        tools:text="Camera"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <TextView
+        android:id="@+id/cameraDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/cameraTextView"
+        tools:text="Camera Model" />
+
+    <TextView
+        android:id="@+id/resolutionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/cameraDetailsTextView"
+        tools:text="Resolution"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <TextView
+        android:id="@+id/resolutionDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/resolutionTextView"
+        tools:text="Resolution Details" />
+
+    <TextView
+        android:id="@+id/isoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/resolutionDetailsTextView"
+        tools:text="ISO"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <TextView
+        android:id="@+id/isoDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/isoTextView"
+        tools:text="ISO Details" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <TextView
+        android:id="@+id/apertureTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        tools:text="Aperture"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <TextView
+        android:id="@+id/apertureDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:layout_constraintTop_toBottomOf="@id/apertureTextView"
+        tools:text="Aperture Details" />
+
+    <TextView
+        android:id="@+id/exposureTimeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:layout_constraintTop_toBottomOf="@id/apertureDetailsTextView"
+        tools:text="exposureTime"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <TextView
+        android:id="@+id/exposureTimeDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:layout_constraintTop_toBottomOf="@id/exposureTimeTextView"
+        tools:text="exposureTime Details" />
+
+
+    <TextView
+        android:id="@+id/focalLengthTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:layout_constraintTop_toBottomOf="@id/exposureTimeDetailsTextView"
+        tools:text="focalLength"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <TextView
+        android:id="@+id/focalLengthDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/guideLineCenter"
+        app:layout_constraintTop_toBottomOf="@id/focalLengthTextView"
+        tools:text="focalLength Details" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/isoDetailsTextView"
+        tools:text="Description"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <TextView
+        android:id="@+id/descriptionDetailsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+        tools:text="Description Details" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/descriptionDetailsTextView" />
+
+    <ImageView
+        android:id="@+id/likesImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_favorite_border_24"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/likesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/likesImageView"
+        app:layout_constraintStart_toEndOf="@id/likesImageView"
+        tools:text="1"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <ImageView
+        android:id="@+id/viewsImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_visibility"
+        app:layout_constraintStart_toEndOf="@id/likesTextView"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/viewsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewsImageView"
+        app:layout_constraintStart_toEndOf="@id/viewsImageView"
+        tools:text="1"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <ImageView
+        android:id="@+id/downloadsImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_download"
+        app:layout_constraintStart_toEndOf="@id/viewsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <TextView
+        android:id="@+id/downloadsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/downloadsImageView"
+        app:layout_constraintStart_toEndOf="@id/downloadsImageView"
+        tools:text="1"
+        style="@style/PhotoDetailsTextStyle"/>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/likesImageView" />
+
+    <!--    <com.google.android.material.divider.MaterialDivider-->
+    <!--        android:id="@+id/divider4"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:dividerInsetStart="20dp"-->
+    <!--        app:dividerInsetEnd="20dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/guidelineRight"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guidelineLeft"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/likesImageView"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

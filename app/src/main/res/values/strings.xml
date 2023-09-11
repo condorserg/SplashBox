@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">SplashBox</string>
+    <string name="IntroSlide1Descr">Просматривайте более 1 млн фотографий в высоком разрешении</string>
+    <string name="IntroSlide2Descr">Создавайте снимки, публикуйте, получайте лайки!</string>
+    <string name="IntroSlide3Descr">Делитесь с друзьями, собирайте коллекции</string>
+    <string name="intro_skip_button">skip</string>
+    <string name="intro_done_button">DONE</string>
+    <string name="auth_login">Войти</string>
+    <string name="auth_canceled">Аутентификация не выполнена</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="navigation_photos">Фото</string>
+    <string name="navigation_collections">Коллекции</string>
+    <string name="navigation_user">Пользователь</string>
+    <string name="likes">Лайки: %1$d</string>
+    <string name="camera">Камера:</string>
+    <string name="resolution">Разрешение:</string>
+    <string name="iso">ISO:</string>
+    <string name="aperture">Апертура:</string>
+    <string name="exposure">Экспозиция:</string>
+    <string name="focal_lenght">Фокусное расстояние:</string>
+    <string name="description">Описание:</string>
+    <string name="na">n/a</string>
+    <string name="getPhotoDetailsError">\Ошибка загрузки фото"</string>
+    <string name="likePhotoError">Не удалось поставить лайк</string>
+    <string name="downloadPhotoError">Ошибка загрузки</string>
+    <string name="errorOpenLocation">Ошибка загрузки местоположения</string>
+    <string name="locationNA">Местоположение недоступно</string>
+    <string name="downloadSuccessNotification">Фото успешно загружено.</string>
+    <string name="downloadErrorNotification">Ошибка загрузки</string>
+    <string name="shareLinkTitle">Поделиться</string>
+    <string name="requestPermissionToast">Нельзя сохранить файл без разрешения!</string>
+    <string name="downloadStarted">Загрузка началась</string>
+    <string name="searchPhotoError">Ошибка поиска</string>
+    <string name="listOfCollections">Список коллекций</string>
+    <string name="photoDetailsToolBar">Детальная информация о фото</string>
+    <string name="collectionsList">Список коллекций</string>
+    <string name="collectionTitle">\Коллекция \</string>
+    <string name="noSearchResults">\Поиск не дал результата</string>
+    <string name="emptyList">\Список пуст</string>
+    <string name="liked_photos_title">Лайкнутые фото</string>
+    <string name="logout_dialog_title">Выход из профиля</string>
+    <string name="logout_dialog_message">Вы действительно хотите выйти из профиля? Все локальные данные будут удалены!</string>
+    <string name="logout_dialog_positive_button">Да</string>
+    <string name="logout_dialog_negative_button">Нет</string>
+    <string name="photos_load_error_toast">Ошибка загрузки фото</string>
+    <string name="errorLoading">Ошибка загрузки</string>
+</resources>

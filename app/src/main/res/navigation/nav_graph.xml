@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.skillbox.github.ui.auth.AuthFragment"
+        android:label="AuthFragment">
+        <action
+            android:id="@+id/action_authFragment_to_mainFragment"
+            app:destination="@id/navigation_photos"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_photos"
+        android:name="com.condor.splashbox.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_photoDetailsFragment"
+            app:destination="@id/photoDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_mainFragment_to_photoSearchFragment"
+            app:destination="@id/photoSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.condor.splashbox.onboarding.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.condor.splashbox.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager">
+        <action
+            android:id="@+id/action_viewPagerFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoDetailsFragment"
+        android:name="com.condor.splashbox.data.photo.PhotoDetailsFragment"
+        android:label="PhotoDetailsFragment">
+        <argument
+            android:name="photo"
+            app:argType="com.condor.splashbox.data.photo.Photo" />
+    </fragment>
+    <fragment
+        android:id="@+id/collectionsFragment"
+        android:name="com.condor.splashbox.data.collection.CollectionsFragment"
+        android:label="Collections"
+        tools:layout="@layout/fragment_collections">
+        <action
+            android:id="@+id/action_collections_fragment_to_collectionPhotosFragment"
+            app:destination="@id/collectionPhotosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_user"
+    android:name="com.condor.splashbox.data.user.UserFragment"
+    android:label="UserFragment"
+    tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_navigation_user_to_photoDetailsFragment"
+            app:destination="@id/photoDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoSearchFragment"
+        android:name="com.condor.splashbox.data.photo.PhotoSearchFragment"
+        android:label="PhotoSearchFragment" >
+        <action
+            android:id="@+id/action_photoSearchFragment_to_photoDetailsFragment"
+            app:destination="@id/photoDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/collectionPhotosFragment"
+        android:name="com.condor.splashbox.data.collection.CollectionPhotosFragment"
+        android:label="CollectionPhotosFragment" >
+        <argument
+            android:name="collection"
+            app:argType="com.condor.splashbox.data.collection.Collection" />
+        <action
+            android:id="@+id/action_collectionPhotosFragment_to_photoDetailsFragment"
+            app:destination="@id/photoDetailsFragment" />
+    </fragment>
+
+</navigation>
